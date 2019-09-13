@@ -17,6 +17,14 @@ public class Car
         mpg = 15.0;
     }
 
+    public Car(String model, Color color, int numPassengers, double amountOfGas, double mpg)
+    {
+        this.model = model;
+        this.color = color;
+        this.numPassengers = numPassengers;
+        this.amountOfGas = amountOfGas;
+        this.mpg = mpg;
+    }
     /**
      *Drives the car given distance. Subtracts gas from the tank
      *
@@ -24,17 +32,28 @@ public class Car
      */
     public void drive(double distance)
     {
-        amountOfgas -= distance / mpg;
+        amountOfGas -= distance / mpg;
     }
 
    /**
+    *amount of gas in tank
     *
-    *@return amount off gas
+    * @return amount of gas
     */
-    public double getamounOfgas()
+    public double getamountOfGas()
     {
-        return amountOfgas
+        return amountOfGas;
     }
+
+    /**
+     * Fills up the gas tank
+     *
+     * @param amount of gas to add tank
+     */
+     public void fillupGasTank(double amount)
+     {
+         amountofGas += amount;
+     }
     public String toString()
     {
 
