@@ -40,6 +40,17 @@ public class TemperatureConverter
         {
             result += "Fahrenheit";
         }
+        return result; public String toString()
+    {
+        String result = "The current temperature is " + temperature + " degrees";
+        if (isCelsius)
+        {
+            result += "Celsius";
+        }
+        else
+        {
+            result += "Fahrenheit";
+        }
         return result;
     }
 
